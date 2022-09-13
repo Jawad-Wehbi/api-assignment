@@ -1,14 +1,14 @@
 
 <?php
-
+// enter the string...
 $string = $_GET['string'];
-Palindrome($string);
 
+// Implement function to do identify if a string is palindrome...
 function Palindrome($string) {
   $l = 0;
   $r = strlen($string) - 1;
   $flag = 0;
-
+// $l is the first index and $r is the last index
   while($r > $l){
     if ($string[$l] != $string[$r]){
       $flag = 1;
@@ -19,7 +19,7 @@ function Palindrome($string) {
   }
 
   $result = "";
-
+// after the flag is 0 the scannig of the word is ended 
   if ($flag == 0){
     $result = "Palindrome";
   } else {
@@ -30,4 +30,5 @@ function Palindrome($string) {
   echo json_encode($data);
 
 }
+Palindrome($string);
 ?>
